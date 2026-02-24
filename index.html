@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compset Air | Screw & Piston Compressor Service, Repair & Spares Delhi</title>
+    <meta name="description" content="Expert compressor service, repair, and genuine spares in Delhi. Specialized in high-efficiency screw compressors and heavy-duty piston compressors. 20+ years experience in Bawana.">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --accent-light: #dbeafe;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --radius: 12px;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.05);
+        }
+
+        * { margin:0; padding:0; box-sizing:border-box; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior:smooth; }
+        body { background: var(--bg-light); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
+        .container { width: 90%; max-width: 1200px; margin: auto; }
+
+        .reveal { opacity: 0; transform: translateY(20px); transition: var(--transition); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* Navbar */
+        .navbar { position: fixed; width: 100%; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); z-index: 1000; }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
+        .logo { height: 45px; cursor: pointer; z-index: 1100; }
+        .nav-links { display: flex; align-items: center; gap: 30px; }
+        .nav-links a { text-decoration: none; font-weight: 700; color: var(--text-main); font-size: 0.8rem; cursor: pointer; text-transform: uppercase; }
+
+        /* Mobile Menu */
+        .menu-toggle { display: none; flex-direction: column; gap: 6px; cursor: pointer; z-index: 1100; }
+        .menu-toggle span { width: 30px; height: 3px; background: var(--primary); border-radius: 3px; transition: 0.3s; }
+
+        /* Hero */
+        .hero { padding: 160px 0 100px; background: radial-gradient(circle at top right, #f1f5f9, #ffffff); }
+        .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; gap: 60px; }
+        .hero h1 { font-size: clamp(34px, 5vw, 60px); color: var(--primary); line-height: 1.1; margin-bottom: 24px; font-weight: 800; }
+        .hero p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 35px; max-width: 540px; }
+        .badge { display: inline-block; padding: 6px 14px; background: var(--accent-light); color: var(--accent); border-radius: 100px; font-size: 0.75rem; font-weight: 700; margin-bottom: 20px; }
+        .hero-img-wrap { animation: float 5s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-15px); } }
+        .hero-img-wrap img { width: 100%; filter: drop-shadow(0 30px 60px rgba(0,0,0,0.12)); border-radius: 20px; }
+        .cta-btn { display: inline-block; padding: 16px 36px; background: var(--accent); color: white; border-radius: var(--radius); text-decoration: none; font-weight: 700; transition: var(--transition); border: none; cursor: pointer; }
+
+        .stats-bar { display: flex; gap: 40px; margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--border); }
+        .stat-item h2 { color: var(--primary); font-size: 1.8rem; font-weight: 800; }
+        .stat-item p { font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; }
+
+        /* Sections */
+        .section { padding: 80px 0; }
+        .section-tag { display: block; text-align: center; color: var(--accent); font-weight: 800; text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem; margin-bottom: 12px; }
+        .section-title { text-align: center; font-size: clamp(32px, 4vw, 42px); margin-bottom: 50px; color: var(--primary); font-weight: 800; }
+
+        /* Comparison Table Styling */
+        .table-wrap { margin-bottom: 60px; border-radius: 15px; border: 1px solid var(--border); box-shadow: var(--shadow-md); background: white; overflow: hidden; }
+        .table-container { overflow-x: auto; }
+        .spec-table { width: 100%; border-collapse: collapse; min-width: 600px; }
+        .spec-table th { background: var(--primary); color: white; padding: 18px; text-align: left; font-size: 0.85rem; text-transform: uppercase; }
+        .spec-table td { padding: 15px 18px; border-bottom: 1px solid var(--border); font-size: 0.9rem; font-weight: 600; }
+        .spec-table tr:nth-child(even) { background: #f8fafc; }
+        .spec-table tr:hover { background: var(--accent-light); transition: 0.2s; }
+
+        .deal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .deal-item { background: white; padding: 24px; border-radius: var(--radius); border: 1px solid var(--border); text-align: center; font-weight: 700; transition: var(--transition); }
+        .deal-item:hover { border-color: var(--accent); color: var(--accent); }
+
+        .director-box { background: var(--primary); padding: 60px; border-radius: 30px; color: white; position: relative; overflow: hidden; }
+        .director-box b { color: #60a5fa; }
+
+        .industries-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; }
+        .industry-card { background: white; padding: 40px 20px; border-radius: 20px; text-align: center; border: 1px solid var(--border); transition: var(--transition); }
+        .industry-card:hover { background: var(--accent); color: white; }
+        .industry-card h3 { font-size: 2.5rem; margin-bottom: 15px; display: block; }
+
+        .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
+        .trust-card { background: white; padding: 35px; border-radius: 20px; border: 1px solid var(--border); transition: var(--transition); }
+        .trust-card:hover { border-color: var(--accent); }
+        .trust-card h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 15px; color: var(--primary); display: flex; align-items: center; gap: 10px; }
+
+        .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+
+        .cat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .cat-card { background: white; border-radius: 24px; padding: 40px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; border: 1px solid var(--border); transition: var(--transition); }
+        .cat-card:hover { border-color: var(--accent); transform: translateY(-5px); }
+        .cat-card img { width: 140px; }
+
+        /* Pages */
+        .page { display: none; padding-top: 140px; padding-bottom: 100px; }
+        .model-card { background: white; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-md); margin-bottom: 40px; border: 1px solid var(--border); }
+        .model-main { display: grid; grid-template-columns: 400px 1fr; }
+        .model-img-box { background: #f1f5f9; padding: 40px; display: flex; align-items: center; justify-content: center; }
+        .model-img-box img { max-width: 100%; border-radius: 12px; }
+        .model-content { padding: 40px; }
+        .model-title { font-weight: 800; font-size: 1.75rem; color: var(--primary); margin-bottom: 25px; }
+
+        .spec-bar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 30px; }
+        .bar-item { background: var(--bg-light); padding: 15px; border-radius: 12px; text-align: center; border: 1px solid var(--border); }
+        .bar-item small { display: block; font-size: 0.65rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase; }
+        .bar-item strong { font-size: 1rem; color: var(--primary); }
+
+        .tech-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 40px; border-top: 1px solid var(--border); padding-top: 25px; }
+        .tech-list li { font-size: 0.9rem; border-bottom: 1px solid #f8fafc; display: flex; justify-content: space-between; color: var(--text-muted); padding: 5px 0; }
+        .tech-list li b { color: var(--text-main); }
+        .warranty-tag { display: inline-flex; align-items: center; gap: 8px; margin-top: 25px; padding: 8px 16px; background: #fef2f2; color: #dc2626; border-radius: 8px; font-size: 0.8rem; font-weight: 700; border: 1px solid #fee2e2; }
+
+        .quote-btn { background: #22c55e; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; transition: var(--transition); }
+        .quote-btn:hover { background: #16a34a; transform: translateY(-2px); }
+
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+        .gallery-item img, .gallery-item video { width: 100%; height: 250px; object-fit: cover; border-radius: 15px; border: 1px solid var(--border); }
+
+        footer { background: var(--primary); color: white; padding: 60px 0; text-align: center; border-top: 4px solid var(--accent); }
+        footer p { margin-bottom: 10px; font-size: 0.95rem; }
+        .whatsapp { position: fixed; bottom: 30px; right: 30px; background: #22c55e; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 28px; z-index: 1000; box-shadow: 0 10px 20px rgba(34,197,94,0.4); }
+
+        @media(max-width: 1000px) {
+            .nav-links { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: white; flex-direction: column; justify-content: center; transition: 0.4s ease; z-index: 1050; gap: 30px; }
+            .nav-links.active { right: 0; }
+            .nav-links a { font-size: 1.5rem; }
+            .menu-toggle { display: flex; }
+            .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(8px, 8px); }
+            .menu-toggle.active span:nth-child(2) { opacity: 0; }
+            .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(8px, -8px); }
+            .hero-grid, .model-main, .cat-grid, .service-grid { grid-template-columns: 1fr; }
+            .model-img-box { height: 300px; }
+            .tech-list { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="navbar">
+    <div class="container nav-inner">
+        <img src="./logo.png" class="logo" onclick="showHome()">
+        <div class="menu-toggle" id="mobile-toggle" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a onclick="showHome()">Home</a>
+            <a onclick="showPage('screw-page')">Screw Compressor</a>
+            <a onclick="showPage('piston-page')">Piston Compressor</a>
+            <a onclick="showPage('gallery-page')" style="color:var(--accent)">Live Gallery</a>
+            <a href="#contact" onclick="toggleMenu()">Contact</a>
+        </div>
+    </div>
+</header>
+
+<div id="home-content">
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="animate__animated animate__fadeInLeft">
+                <span class="badge">ISO 9001:2015 CERTIFIED</span>
+                <h1>Precision Engineered <br><span style="color:var(--accent)">Air Solutions.</span></h1>
+                <p>Compset Air: Delivering industrial-grade reliability, nationwide service, and maximum energy efficiency for over 20 years.</p>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <button class="cta-btn" onclick="showPage('screw-page')">Explore Product Range</button>
+                    <button class="cta-btn" style="background:#f1f5f9; color:var(--primary);" onclick="showPage('gallery-page')">View Site Gallery</button>
+                </div>
+                <div class="stats-bar">
+                    <div class="stat-item"><h2>20+</h2><p>Years Experience</p></div>
+                    <div class="stat-item"><h2>5000+</h2><p>Happy Clients</p></div>
+                </div>
+            </div>
+            <div class="hero-img-wrap animate__animated animate__zoomIn">
+                <img src="./can.png" alt="Industrial Compressor">
+            </div>
+        </div>
+    </section>
+
+    <section class="section reveal">
+        <div class="container">
+            <div class="director-box">
+                <p>Compset is a trusted air compressor brand delivering reliable solutions for industrial, commercial, and workshop applications. Led by <b>Director Mr. Rahul Bansal</b>, with 20+ years of experience, we supply the PET, hospital, and food sectors. Built on quality and trust, our products ensure consistent performance.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section reveal">
+        <div class="container">
+            <span class="section-tag">Our Portfolio</span>
+            <p style="text-align: center; font-weight: 700; color: var(--primary); font-size: 1.1rem; margin-bottom: 20px;">
+                We supply Piston & Screw compressors, provide service, repair and genuine spares for all types of compressors.
+            </p>
+            <h2 class="section-title">We Deal in-</h2>
+            <div class="deal-grid">
+                <div class="deal-item">Screw Compressors</div>
+                <div class="deal-item">Reciprocating Compressors</div>
+                <div class="deal-item">Air Dryers</div>
+                <div class="deal-item">Air Receivers</div>
+                <div class="deal-item">Line Filters</div>
+                <div class="deal-item">Spare Parts</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section reveal" style="background: #f1f5f9;">
+        <div class="container">
+            <span class="section-tag">Reliability Guaranteed</span>
+            <h2 class="section-title">Compressor Service, Repair & Spares</h2>
+            <div class="service-grid">
+                <div class="trust-card">
+                    <h3>🔧 Expert Compressor Repair</h3>
+                    <p>On-site compressor breakdown repair and overhaul services for all major screw and piston compressor brands. Minimizing downtime with professional compressor expertise.</p>
+                </div>
+                <div class="trust-card">
+                    <h3>⚙️ Genuine Compressor Spares</h3>
+                    <p>Complete inventory of high-quality compressor oil filters, compressor air filters, compressor oil-separators, and compressor lubricants available for immediate dispatch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section reveal">
+        <div class="container">
+            <span class="section-tag">The Compset Advantage</span>
+            <h2 class="section-title">Engineered for Performance</h2>
+            <div class="trust-grid">
+                <div class="trust-card"><h3>📍 Based in Delhi</h3><p>Strategically located in Bawana Industrial Area to provide lightning-fast service and delivery across Delhi NCR.</p></div>
+                <div class="trust-card"><h3>🛠️ Expert Service</h3><p>On-site support and maintenance ensures your facility never faces downtime.</p></div>
+                <div class="trust-card"><h3>💰 Cost Efficient</h3><p>Optimized energy consumption to lower your monthly operational expenses.</p></div>
+                <div class="trust-card"><h3>🏗️ Industrial Type</h3><p>Rugged, heavy-duty build quality designed for 24/7 continuous cycles.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section reveal" style="background: white;">
+        <div class="container">
+            <h2 class="section-title">Explore Our Range</h2>
+            <div class="cat-grid">
+                <div class="cat-card" onclick="showPage('screw-page')">
+                    <div><h2>Screw</h2><p style="color:var(--accent); font-weight:700;">Silent, 24/7 Efficiency</p></div>
+                    <img src="./30hpscrew.png">
+                </div>
+                <div class="cat-card" onclick="showPage('piston-page')">
+                    <div><h2>Piston</h2><p style="color:var(--accent); font-weight:700;">Heavy Duty Reliability</p></div>
+                    <img src="./piston.png">
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div id="screw-page" class="page">
+    <div class="container">
+        <h2 class="section-title">Silent Screw Compressor Series</h2>
+        
+        <div class="table-wrap">
+            <div class="table-container">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Model (HP)</th>
+                            <th>Power (kW)</th>
+                            <th>FAD (CFM)</th>
+                            <th>Pressure (kg/cm³)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>10 HP</td><td>7.5 kW</td><td>38 CFM</td><td>8.0</td></tr>
+                        <tr><td>15 HP</td><td>11.0 kW</td><td>55 CFM</td><td>10.0</td></tr>
+                        <tr><td>20 HP</td><td>15.0 kW</td><td>72 CFM</td><td>10.0</td></tr>
+                        <tr><td>30 HP</td><td>22.0 kW</td><td>117 CFM</td><td>10.0</td></tr>
+                        <tr><td>40 HP</td><td>29.5 kW</td><td>165 CFM</td><td>8.0</td></tr>
+                        <tr><td>50 HP</td><td>37.0 kW</td><td>210 CFM</td><td>10.0</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="model-card"><div class="model-main"><div class="model-img-box"><img src="./30hpscrew.png"></div><div class="model-content"><div class="model-hp">10 HP</div><div class="model-title">SCREW COMPRESSOR</div><div class="spec-bar"><div class="bar-item"><small>Power</small><strong>7.5 kW</strong></div><div class="bar-item"><small>Output</small><strong>38 CFM</strong></div><div class="bar-item"><small>Pressure</small><strong>8 kg/cm³</strong></div></div><ul class="tech-list"><li><span>Noise</span><b>65 ± 2 dB</b></li><li><span>Drive</span><b>Direct/Belt</b></li><li><span>Control</span><b>PLC</b></li><li><span>Duty</span><b>100%</b></li></ul><a href="https://wa.me/919811869030?text=Quote for 10HP Screw" class="quote-btn">Get Quote</a></div></div></div>
+        <div class="model-card"><div class="model-main"><div class="model-img-box"><img src="./15hpscrew.png"></div><div class="model-content"><div class="model-hp">15 HP</div><div class="model-title">DIRECT DRIVE SCREW COMPRESSOR</div><div class="spec-bar"><div class="bar-item"><small>Power</small><strong>11 kW</strong></div><div class="bar-item"><small>Output</small><strong>55 CFM</strong></div><div class="bar-item"><small>Pressure</small><strong>10 Bar</strong></div></div><ul class="tech-list"><li><span>Drive</span><b>Direct</b></li><li><span>Control</span><b>PLC</b></li><li><span>Duty</span><b>100%</b></li></ul><a href="https://wa.me/919811869030?text=Quote for 15HP Screw" class="quote-btn">Get Quote</a></div></div></div>
+        <div class="model-card"><div class="model-main"><div class="model-img-box"><img src="./20hpscrew.png"></div><div class="model-content"><div class="model-hp">20 HP</div><div class="model-title">DIRECT DRIVE SCREW COMPRESSOR</div><div class="spec-bar"><div class="bar-item"><small>Power</small><strong>15 kW</strong></div><div class="bar-item"><small>Output</small><strong>72 CFM</strong></div><div class="bar-item"><small>Pressure</small><strong>10 kg/cm³</strong></div></div><ul class="tech-list"><li><span>Drive</span><b>Direct</b></li><li><span>Control</span><b>PLC</b></li><li><span>Duty</span><b>100%</b></li></ul><a href="https://wa.me/919811869030?text=Quote for 20HP Screw" class="quote-btn">Get Quote</a></div></div></div>
+        <div class="model-card"><div class="model-main"><div class="model-img-box"><img src="./30hpscrew.png"></div><div class="model-content"><div class="model-hp">30 HP</div><div class="model-title">SCREW COMPRESSOR</div><div class="spec-bar"><div class="bar-item"><small>Power</small><strong>22 kW</strong></div><div class="bar-item"><small>Output</small><strong>117 CFM</strong></div><div class="bar-item"><small>Pressure</small><strong>10 kg/cm³</strong></div></div><ul class="tech-list"><li><span>Drive</span><b>Direct</b></li><li><span>Control</span><b>PLC</b></li><li><span>Duty</span><b>100%</b></li></ul><a href="https://wa.me/919811869030?text=Quote for 30HP Screw" class="quote-btn">Get Quote</a></div></div></div>
+        <div class="model-card"><div class="model-main"><div class="model-img-box"><img src="./30hpscrew.png"></div><div class="model-content"><div class="model-hp">40 HP</div><div class="model-title">SCREW COMPRESSOR</div><div class="spec-bar"><div class="bar-item"><small>Power</small><strong>29.5 kW</strong></div><div class="bar-item"><small>Output</small><strong>165 CFM</strong></div><div class="bar-item"><small>Pressure</small><strong>8 kg/cm³</strong></div></div><ul class="tech-list"><li><span>Drive</span><b>Direct</b></li><li><span>Control</span><b>PLC</b></li><li><span>Duty</span><b>100%</b></li></ul><a href="https://wa.me/919811869030?text=Quote for 40HP Screw" class="quote-btn">Get Quote</a></div></div></div>
+        <div class="model-card"><div class="model-main"><div class="model-img-box"><img src="./30hpscrew.png"></div><div class="model-content"><div class="model-hp">50 HP</div><div class="model-title">SCREW COMPRESSOR</div><div class="spec-bar"><div class="bar-item"><small>Power</small><strong>37 kW</strong></div><div class="bar-item"><small>Output</small><strong>210 CFM</strong></div><div class="bar-item"><small>Pressure</small><strong>10 kg/cm³</strong></div></div><ul class="tech-list"><li><span>Drive</span><b>Direct</b></li><li><span>Control</span><b>PLC</b></li><li><span>Duty</span><b>100%</b></li></ul><a href="https://wa.me/919811869030?text=Quote for 50HP Screw" class="quote-btn">Get Quote</a></div></div></div>
+        <button class="cta-btn" onclick="showHome()">← Back Home</button>
+    </div>
+</div>
+
+<div id="piston-page" class="page">
+    <div class="container">
+        <h2 class="section-title">Reciprocating Piston Compressor Series</h2>
+        
+        <div class="table-wrap">
+            <div class="table-container">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Model (HP)</th>
+                            <th>Motor (kW)</th>
+                            <th>FAD (CFM)</th>
+                            <th>Tank (Ltr)</th>
+                            <th>Pressure (kg)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>3 HP</td><td>2.2 kW</td><td>9 CFM</td><td>160 Ltr</td><td>12 kg</td></tr>
+                        <tr><td>5 HP</td><td>3.73 kW</td><td>20 CFM</td><td>230 Ltr</td><td>12 kg</td></tr>
+                        <tr><td>7.5 HP</td><td>5.5 kW</td><td>22 CFM</td><td>230 Ltr</td><td>10 kg</td></tr>
+                        <tr><td>10 HP</td><td>7.5 kW</td><td>40 CFM</td><td>420 Ltr</td><td>12 kg</td></tr>
+                        <tr><td>15 HP</td><td>11.0 kW</td><td>45 CFM</td><td>500 Ltr</td><td>12 kg</td></tr>
+                        <tr><td>20 HP</td><td>15.0 kW</td><td>60 CFM</td><td>500 Ltr</td><td>12 kg</td></tr>
+                        <tr><td>25 HP</td><td>18.5 kW</td><td>68 CFM</td><td>500 Ltr</td><td>25 kg</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="model-card"><div class="model-main"><div class="model-img-box"><img src="./3hp.png"></div><div class="model-content"><div class="model-hp">3 HP</div><div class="model-title">HEAVY DUTY PISTON COMPRESSOR</div><ul class="tech-list"><li><span>CFM</span><b>9 CFM</b></li><li><span>Tank</span><b>160 Ltr</b></li><li><span>Pressure</span><b>12 kg</b></li><li><span>Motor</span><b>2.2 kW</b></li></ul><div class="warranty-tag">1 Year Motor | 6 Mo Compressor</div><br><a href="https://wa.me/919811869030?text=Quote for 3HP Piston" class="quote-btn">Get Quote</a></div></div></div>
+        <div class="model-card"><div class="model-main"><div class="model-img-box"><img src="./5hp.png"></div><div class="model-content"><div class="model-hp">5 HP</div><div class="model-title">HEAVY DUTY PISTON COMPRESSOR</div><ul class="tech-list"><li><span>CFM</span><b>20 CFM</b></li><li><span>Tank</span><b>230 Ltr</b></li><li><span>Pressure</span><b>12 kg</b></li><li><span>Motor</span><b>3.73 kW</b></li></ul><div class="warranty-tag">1 Year Motor | 6 Mo Compressor</div><br><a href="https://wa.me/919811869030?text=Quote for 5HP Piston" class="quote-btn">Get Quote</a></div></div></div>
+        <div class="model-card"><div class="model-main"><div class="model-img-box"><img src="./3hp.png"></div><div class="model-content"><div class="model-hp">7.5 HP</div><div class="model-title">HEAVY DUTY PISTON COMPRESSOR</div><ul class="tech-list"><li><span>CFM</span><b>22 CFM</b></li><li><span>Tank</span><b>230 Ltr</b></li><li><span>Pressure</span><b>10 kg</b></li><li><span>Motor</span><b>5.5 kW</b></li></ul><div class="warranty-tag">1 Year Motor | 6 Mo Compressor</div><br><a href="https://wa.me/919811869030?text=Quote for 7.5HP Piston" class="quote-btn">Get Quote</a></div></div></div>
+        <div class="model-card"><div class="model-main"><div class="model-img-box"><img src="./piston.png"></div><div class="model-content"><div class="model-hp">10 HP</div><div class="model-title">INDUSTRIAL PISTON COMPRESSOR</div><ul class="tech-list"><li><span>CFM</span><b>40 CFM</b></li><li><span>Tank</span><b>420 Ltr</b></li><li><span>Pressure</span><b>12 kg</b></li><li><span>Motor</span><b>7.5 kW</b></li></ul><div class="warranty-tag">1 Year Motor | 6 Mo Compressor</div><br><a href="https://wa.me/919811869030?text=Quote for 10HP Piston" class="quote-btn">Get Quote</a></div></div></div>
+        <div class="model-card"><div class="model-main"><div class="model-img-box"><img src="./piston.png"></div><div class="model-content"><div class="model-hp">15 HP</div><div class="model-title">HEAVY DUTY PISTON COMPRESSOR</div><ul class="tech-list"><li><span>CFM</span><b>45 CFM</b></li><li><span>Tank</span><b>500 Ltr</b></li><li><span>Pressure</span><b>12 kg</b></li><li><span>Motor</span><b>11 kW</b></li></ul><div class="warranty-tag">1 Year Motor | 6 Mo Compressor</div><br><a href="https://wa.me/919811869030?text=Quote for 15HP Piston" class="quote-btn">Get Quote</a></div></div></div>
+        <div class="model-card"><div class="model-main"><div class="model-img-box"><img src="./piston.png"></div><div class="model-content"><div class="model-hp">20 HP</div><div class="model-title">HEAVY DUTY PISTON COMPRESSOR</div><ul class="tech-list"><li><span>CFM</span><b>60 CFM</b></li><li><span>Tank</span><b>500 Ltr</b></li><li><span>Pressure</span><b>12 kg</b></li><li><span>Motor</span><b>15 kW</b></li></ul><div class="warranty-tag">1 Year Motor | 6 Mo Compressor</div><br><a href="https://wa.me/919811869030?text=Quote for 20HP Piston" class="quote-btn">Get Quote</a></div></div></div>
+        <div class="model-card"><div class="model-main"><div class="model-img-box"><img src="./25hp.jpeg"></div><div class="model-content"><div class="model-hp">25 HP</div><div class="model-title">HIGH PRESSURE PISTON COMPRESSOR</div><ul class="tech-list"><li><span>CFM</span><b>68 CFM</b></li><li><span>Tank</span><b>500 Ltr</b></li><li><span>Pressure</span><b>25 kg</b></li><li><span>Motor</span><b>18.5 kW</b></li></ul><div class="warranty-tag">1 Year Motor | 6 Mo Compressor</div><br><a href="https://wa.me/919811869030?text=Quote for 25HP Piston" class="quote-btn">Get Quote</a></div></div></div>
+        <button class="cta-btn" onclick="showHome()">← Back Home</button>
+    </div>
+</div>
+
+<div id="gallery-page" class="page">
+    <div class="container">
+        <h2 class="section-title">Site Installations & Media</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="./IMAGE1.jpeg"></div>
+            <div class="gallery-item"><img src="./IMAGE2.jpeg"></div>
+            <div class="gallery-item"><img src="./IMAGE3.jpeg"></div>
+            <div class="gallery-item"><img src="./IMAGE4.jpeg"></div>
+            <div class="gallery-item"><img src="./IMAGE5.jpeg"></div>
+            <div class="gallery-item"><img src="./IMAGE6.jpeg"></div>
+            <div class="gallery-item"><video controls><source src="./VIDEO1.mp4" type="video/mp4"></video></div>
+            <div class="gallery-item"><video controls><source src="./VIDEO2.mp4" type="video/mp4"></video></div>
+            <div class="gallery-item"><video controls><source src="./VIDEO3.mp4" type="video/mp4"></video></div>
+        </div>
+        <div style="text-align:center; margin-top:40px;"><button class="cta-btn" onclick="showHome()">← Back Home</button></div>
+    </div>
+</div>
+
+<footer id="contact">
+    <div class="container">
+        <p><b>Compset Air Equipments</b> | Sector 3, Bawana Industrial Area, Delhi</p>
+        <p><b>Director:</b> Rahul Bansal | <b>Phone:</b> 9811869030 | <b>Email:</b> compsetairequipments@gmail.com</p>
+        <p><b>GST:</b> 07AFFPB4047L1ZJ</p>
+    </div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/919811869030" target="_blank">💬</a>
+
+<script>
+    function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("active");
+        document.getElementById("mobile-toggle").classList.toggle("active");
+    }
+    function showPage(id){
+        document.getElementById("home-content").style.display = "none";
+        document.querySelectorAll(".page").forEach(p => p.style.display = "none");
+        document.getElementById(id).style.display = "block";
+        document.getElementById("navLinks").classList.remove("active");
+        document.getElementById("mobile-toggle").classList.remove("active");
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    function showHome(){
+        document.querySelectorAll(".page").forEach(p => p.style.display = "none");
+        document.getElementById("home-content").style.display = "block";
+        document.getElementById("navLinks").classList.remove("active");
+        document.getElementById("mobile-toggle").classList.remove("active");
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
